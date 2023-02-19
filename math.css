@@ -1,0 +1,59 @@
+
+
+.contenedor{
+    
+    width: 400px;
+    height: 200px;
+
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: repeat(5, 40px);
+    background-color: papayawhip;
+    justify-content: center;
+    place-items: center;
+}
+
+div .comentario{
+
+    
+
+ 
+    font-size: 15px;
+    width: 100%;
+    height: 20px;
+   
+}
+
+div .entrada{
+
+    
+
+    width: 100px;
+    height: 20px;
+  
+
+}
+
+.salida{
+
+    grid-row: 3 / 6;
+
+
+}
+
+
+
+ .resul{
+
+    
+
+    grid-row: 3 / 6;
+
+    
+
+    
+
+
+
+    
+}
