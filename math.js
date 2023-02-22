@@ -1,15 +1,49 @@
 const valor = document.querySelector('#valor');
-const descuento = document.querySelector('#descuento');
+const inputCupon = document.querySelector('#descuento');
 const resultado = document.querySelector('.resul input');
 const total = document.querySelector('#resulta');
- 
+const btn = document.querySelector('.salida button');
 
+
+ 
+   btn.addEventListener("click", calcularDescuento)
+
+
+    console.log()
+   
+
+   
 
 function calcularDescuento(){
 
     
 
-    const des = descuento.value;
+    var cupon = inputCupon.value;
+
+
+
+    console.log(cupon);
+
+    let valordes;
+
+    if( cupon == "Hola_Mundo"){
+
+        valordes = 15;
+    }
+    else if (cupon == "No_digas ") {
+
+      valordes = 30;
+        
+    } else {
+
+        return "ingresa algun cupon valido"
+        
+    }
+ 
+    
+    console.log("hola");
+    
+    const des = valordes;
     const val = valor.value;
     const res = (des/100)*val;
     const restotal = val-res;
@@ -20,6 +54,8 @@ function calcularDescuento(){
     console.log(restotal);
     total.innerHTML = "resultado" + " " + restotal;
 
+   
+
 
     
 
@@ -27,6 +63,7 @@ function calcularDescuento(){
 
 
 console.log(valor.value);
+
 
 
 
