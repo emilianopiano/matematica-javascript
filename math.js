@@ -30,17 +30,23 @@ function calcularDescuento(){
 
         valordes = 15;
     }
-    else if (cupon == "No_digas ") {
+    else if(cupon == "No_digas") {
 
       valordes = 30;
         
-    } else {
+    }
+    else if(cupon == "Fernado") {
+
+        valordes = 50;
+          
+      }
+    
+    else {
 
         return "ingresa algun cupon valido"
         
     }
- 
-    
+
     console.log("hola");
     
     const des = valordes;
