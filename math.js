@@ -38,35 +38,38 @@ function calcularDescuento(){
         descuento: 30,
     });
 
+
+    arregloObj.push({
+
+        name:"Eduard",
+        descuento: 70,
+    });
+
     console.log(arregloObj)
 
 
 
 
-    function filtrar(elementCupon, indice){
+    function filtrar(elementCupon){
 
        
-        if ( elementCupon.name == cupon){
+        return elementCupon.name ==  cupon;
 
+};
 
-            let indice = elementCupon.findIndex((elemento, indice) => {
+    
 
-                return true;
-            });
-             
-        };
+   const restdoFiltro = arregloObj.find(filtrar);
 
-    }
+   if(restdoFiltro){
 
-   const restdoFiltro = arregloObj.filter(filtrar);
+    valordes = restdoFiltro.descuento
 
-   if(restdoFiltro.length > 0){
+   }
 
-    console.log(restdoFiltro);
+   else {
 
-    console.log(restdoFiltro.length);
-
-    valordes = restdoFiltro[indice].descuento
+    return total.innerHTML = "Ingresa un coupon valido";
 
 
    }
