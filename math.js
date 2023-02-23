@@ -17,35 +17,123 @@ const btn = document.querySelector('.salida button');
 function calcularDescuento(){
 
     
-
-    var cupon = inputCupon.value;
-
-
+    
+    let cupon = inputCupon.value;
+    let valordes;
 
     console.log(cupon);
 
-    let valordes;
 
-    if( cupon == "Hola_Mundo"){
+    let arregloObj = [];
 
-        valordes = 15;
+    arregloObj.push({
+
+        name:"Hola_Mundo",
+        descuento: 15,
+    });
+
+   arregloObj.push({
+
+        name:"No_digas",
+        descuento: 30,
+    });
+
+    console.log(arregloObj)
+
+
+
+
+    function filtrar(elementCupon, indice){
+
+       
+        if ( elementCupon.name == cupon){
+
+
+            let indice = elementCupon.findIndex((elemento, indice) => {
+
+                return true;
+            });
+             
+        };
+
     }
-    else if(cupon == "No_digas") {
 
-      valordes = 30;
-        
+   const restdoFiltro = arregloObj.filter(filtrar);
+
+   if(restdoFiltro.length > 0){
+
+    console.log(restdoFiltro);
+
+    console.log(restdoFiltro.length);
+
+    valordes = restdoFiltro[indice].descuento
+
+
+   }
+   
+   
+   
+
+
+
+
+   
+
+   /* let = arregloObj = {
+
+        'Hola_Mundo':15,
+        'No_digas':30,
+    };
+
+    if(arregloObj[cupon]){
+
+        valordes = arregloObj[cupon]
+
+
     }
-    else if(cupon == "Fernado") {
+    else{
 
-        valordes = 50;
-          
-      }
+        return total.innerHTML = "Ingresa un coupon valido";
+    }*/
+
+    // switch (cupon) {
+    //     case "Hola_Mundo":
+
+    //     valordes = 15;
+            
+    //         break;
+    //         case "No_digas":
+
+    //         valordes = 30;
+                
+    //             break;
     
-    else {
+    //     default:
+    //         total.innerHTML = "El cupon no es valido";
+    //         return
+    //         break;
+    // }
 
-        return "ingresa algun cupon valido"
+    // if( cupon == "Hola_Mundo"){
+
+    //     valordes = 15;
+    // }
+    // else if(cupon == "No_digas") {
+
+    //   valordes = 30;
         
-    }
+    // }
+    // else if(cupon == "Fernado") {
+
+    //     valordes = 50;
+          
+    //   }
+    
+    // else {
+
+    //     return "ingresa algun cupon valido"
+        
+    // }
 
     console.log("hola");
     
